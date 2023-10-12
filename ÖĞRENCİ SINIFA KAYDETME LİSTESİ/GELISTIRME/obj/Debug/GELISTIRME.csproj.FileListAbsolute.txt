@@ -1,0 +1,15 @@
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\GELISTIRME.exe.config
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\GELISTIRME.exe
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\GELISTIRME.pdb
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.FormSinifListesi.resources
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.exe
+C:\Users\Lenovo\Desktop\Eğitim Kurs Klasörü\C# FROM DERSLERİNE GİRİŞ\10.10.2023\GELISTIRME\GELISTIRME\obj\Debug\GELISTIRME.pdb

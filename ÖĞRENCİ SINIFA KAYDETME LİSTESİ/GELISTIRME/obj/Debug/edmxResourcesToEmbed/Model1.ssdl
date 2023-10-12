@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OkulSabahDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bolumler">
+    <Key>
+      <PropertyRef Name="BolumlerID" />
+    </Key>
+    <Property Name="BolumlerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BolumAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ogretmenler">
+    <Key>
+      <PropertyRef Name="OgretmenlerID" />
+    </Key>
+    <Property Name="OgretmenlerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgretmenTC" Type="nvarchar" MaxLength="11" />
+    <Property Name="OgretmenAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgretmenSoyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cinsiyet" Type="nvarchar" MaxLength="10" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="MedeniHali" Type="nvarchar" MaxLength="10" />
+    <Property Name="DogumTarihi" Type="date" />
+    <Property Name="DogumYeriID" Type="int" />
+    <Property Name="Adres" Type="nvarchar(max)" />
+    <Property Name="KanGrubuID" Type="int" />
+    <Property Name="BransID" Type="int" />
+    <Property Name="KullaniciID" Type="int" />
+    <Property Name="AktifMi" Type="bit" />
+  </EntityType>
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="SınıflarID" />
+    </Key>
+    <Property Name="SınıflarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SınıfNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="SınıfSubesi" Type="nvarchar" MaxLength="10" />
+    <Property Name="OgretmenID" Type="int" />
+    <Property Name="BolumID" Type="int" />
+    <Property Name="AktifMi" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Sınıflar_Bolumler">
+    <End Role="Bolumler" Type="Self.Bolumler" Multiplicity="0..1" />
+    <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bolumler">
+        <PropertyRef Name="BolumlerID" />
+      </Principal>
+      <Dependent Role="Siniflar">
+        <PropertyRef Name="BolumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sınıflar_Ogretmenler">
+    <End Role="Ogretmenler" Type="Self.Ogretmenler" Multiplicity="0..1" />
+    <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogretmenler">
+        <PropertyRef Name="OgretmenlerID" />
+      </Principal>
+      <Dependent Role="Siniflar">
+        <PropertyRef Name="OgretmenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OkulSabahDBModelStoreContainer">
+    <EntitySet Name="Bolumler" EntityType="Self.Bolumler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ogretmenler" EntityType="Self.Ogretmenler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siniflar" EntityType="Self.Siniflar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Sınıflar_Bolumler" Association="Self.FK_Sınıflar_Bolumler">
+      <End Role="Bolumler" EntitySet="Bolumler" />
+      <End Role="Siniflar" EntitySet="Siniflar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sınıflar_Ogretmenler" Association="Self.FK_Sınıflar_Ogretmenler">
+      <End Role="Ogretmenler" EntitySet="Ogretmenler" />
+      <End Role="Siniflar" EntitySet="Siniflar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OkulSabahDBModelStoreContainer" CdmEntityContainer="OkulSabahDBEntities">
+    <EntitySetMapping Name="Siniflar">
+      <EntityTypeMapping TypeName="OkulSabahDBModel.Siniflar">
+        <MappingFragment StoreEntitySet="Siniflar">
+          <ScalarProperty Name="SınıflarID" ColumnName="SınıflarID" />
+          <ScalarProperty Name="SınıfNo" ColumnName="SınıfNo" />
+          <ScalarProperty Name="SınıfSubesi" ColumnName="SınıfSubesi" />
+          <ScalarProperty Name="OgretmenID" ColumnName="OgretmenID" />
+          <ScalarProperty Name="BolumID" ColumnName="BolumID" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bolumler">
+      <EntityTypeMapping TypeName="OkulSabahDBModel.Bolumler">
+        <MappingFragment StoreEntitySet="Bolumler">
+          <ScalarProperty Name="BolumAdi" ColumnName="BolumAdi" />
+          <ScalarProperty Name="BolumlerID" ColumnName="BolumlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ogretmenler">
+      <EntityTypeMapping TypeName="OkulSabahDBModel.Ogretmenler">
+        <MappingFragment StoreEntitySet="Ogretmenler">
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="BransID" ColumnName="BransID" />
+          <ScalarProperty Name="KanGrubuID" ColumnName="KanGrubuID" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="DogumYeriID" ColumnName="DogumYeriID" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="OgretmenSoyadi" ColumnName="OgretmenSoyadi" />
+          <ScalarProperty Name="OgretmenAdi" ColumnName="OgretmenAdi" />
+          <ScalarProperty Name="OgretmenTC" ColumnName="OgretmenTC" />
+          <ScalarProperty Name="OgretmenlerID" ColumnName="OgretmenlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

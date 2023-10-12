@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OkulSabahDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="SınıflarID" />
+    </Key>
+    <Property Name="SınıflarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SınıfNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SınıfSubesi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OgretmenID" Type="Int32" />
+    <Property Name="BolumID" Type="Int32" />
+    <Property Name="AktifMi" Type="Boolean" />
+    <NavigationProperty Name="Bolumler" Relationship="OkulSabahDBModel.FK_Sınıflar_Bolumler" FromRole="Siniflar" ToRole="Bolumler" />
+    <NavigationProperty Name="Ogretmenler" Relationship="OkulSabahDBModel.FK_Sınıflar_Ogretmenler" FromRole="Siniflar" ToRole="Ogretmenler" />
+  </EntityType>
+  <EntityContainer Name="OkulSabahDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Siniflar" EntityType="Self.Siniflar" />
+    <EntitySet Name="Bolumler" EntityType="OkulSabahDBModel.Bolumler" />
+    <EntitySet Name="Ogretmenler" EntityType="OkulSabahDBModel.Ogretmenler" />
+    <AssociationSet Name="FK_Sınıflar_Bolumler" Association="OkulSabahDBModel.FK_Sınıflar_Bolumler">
+      <End Role="Bolumler" EntitySet="Bolumler" />
+      <End Role="Siniflar" EntitySet="Siniflar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sınıflar_Ogretmenler" Association="OkulSabahDBModel.FK_Sınıflar_Ogretmenler">
+      <End Role="Ogretmenler" EntitySet="Ogretmenler" />
+      <End Role="Siniflar" EntitySet="Siniflar" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bolumler">
+    <Key>
+      <PropertyRef Name="BolumlerID" />
+    </Key>
+    <Property Name="BolumlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BolumAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Siniflar" Relationship="OkulSabahDBModel.FK_Sınıflar_Bolumler" FromRole="Bolumler" ToRole="Siniflar" />
+  </EntityType>
+  <EntityType Name="Ogretmenler">
+    <Key>
+      <PropertyRef Name="OgretmenlerID" />
+    </Key>
+    <Property Name="OgretmenlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OgretmenTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="OgretmenAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OgretmenSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="DogumYeriID" Type="Int32" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubuID" Type="Int32" />
+    <Property Name="BransID" Type="Int32" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <Property Name="AktifMi" Type="Boolean" />
+    <NavigationProperty Name="Siniflar" Relationship="OkulSabahDBModel.FK_Sınıflar_Ogretmenler" FromRole="Ogretmenler" ToRole="Siniflar" />
+  </EntityType>
+  <Association Name="FK_Sınıflar_Bolumler">
+    <End Type="OkulSabahDBModel.Bolumler" Role="Bolumler" Multiplicity="0..1" />
+    <End Type="OkulSabahDBModel.Siniflar" Role="Siniflar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bolumler">
+        <PropertyRef Name="BolumlerID" />
+      </Principal>
+      <Dependent Role="Siniflar">
+        <PropertyRef Name="BolumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sınıflar_Ogretmenler">
+    <End Type="OkulSabahDBModel.Ogretmenler" Role="Ogretmenler" Multiplicity="0..1" />
+    <End Type="OkulSabahDBModel.Siniflar" Role="Siniflar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogretmenler">
+        <PropertyRef Name="OgretmenlerID" />
+      </Principal>
+      <Dependent Role="Siniflar">
+        <PropertyRef Name="OgretmenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
